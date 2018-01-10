@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Type_of_cuisine resource:
+  # CREATE
+  get "/type_of_cuisines/new", :controller => "type_of_cuisines", :action => "new"
+  post "/create_type_of_cuisine", :controller => "type_of_cuisines", :action => "create"
+
+  # READ
+  get "/type_of_cuisines", :controller => "type_of_cuisines", :action => "index"
+  get "/type_of_cuisines/:id", :controller => "type_of_cuisines", :action => "show"
+
+  # UPDATE
+  get "/type_of_cuisines/:id/edit", :controller => "type_of_cuisines", :action => "edit"
+  post "/update_type_of_cuisine/:id", :controller => "type_of_cuisines", :action => "update"
+
+  # DELETE
+  get "/delete_type_of_cuisine/:id", :controller => "type_of_cuisines", :action => "destroy"
+  #------------------------------
+
   devise_for :users
   # Routes for the User resource:
   # READ

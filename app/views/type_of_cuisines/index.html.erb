@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1>
+    Type of cuisines
+    <a href="/type_of_cuisines/new" class="btn btn-lg btn-success">New Type of cuisine</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @type_of_cuisines.each do |type_of_cuisine| %>
+      <tr>
+        <td><%= type_of_cuisine.name %></td>
+        <td>
+          <a href="/type_of_cuisines/<%= type_of_cuisine.id %>" class="btn btn-primary">Show</a>
+          <a href="/type_of_cuisines/<%= type_of_cuisine.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_type_of_cuisine/<%= type_of_cuisine.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
