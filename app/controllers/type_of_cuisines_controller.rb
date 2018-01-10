@@ -6,6 +6,7 @@ class TypeOfCuisinesController < ApplicationController
   end
 
   def show
+    @dish = Dish.new
     @type_of_cuisine = TypeOfCuisine.find(params[:id])
 
     render("type_of_cuisines/show.html.erb")
