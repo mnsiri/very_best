@@ -10,6 +10,10 @@ class Dish < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :specialists,
+             :through => :bookmarks,
+             :source => :venue
+
   # Validations
 
 end
