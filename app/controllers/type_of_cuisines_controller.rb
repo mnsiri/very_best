@@ -1,6 +1,6 @@
 class TypeOfCuisinesController < ApplicationController
   def index
-    @type_of_cuisines = TypeOfCuisine.all
+    @type_of_cuisines = TypeOfCuisine.page(params[:page]).per(10)
 
     render("type_of_cuisines/index.html.erb")
   end
